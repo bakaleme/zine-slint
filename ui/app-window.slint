@@ -1,0 +1,37 @@
+import { Button, LineEdit, VerticalBox, HorizontalBox} from "std-widgets.slint";
+
+export component AppWindow inherits Window {
+    in-out property <string> download_dir;
+    in-out property <string> magnet_link;
+    in-out property <string> status;
+
+    callback select_directory;
+    callback start_download;
+
+    VerticalBox {
+        HorizontalBox {
+            Button {
+                text: "Select Directory";
+                clicked => { select_directory(); }
+            }
+            Text {
+                text: download_dir;
+            }
+        }
+        HorizontalBox {
+            Text {
+                text: "Magnet Link:";
+            }
+            LineEdit {
+                text <=> magnet_link;
+            }
+        }
+        Button {
+            text: "Start Download";
+            clicked => { start_download(); }
+        }
+        Text {
+            text: status;
+        }
+    }
+}

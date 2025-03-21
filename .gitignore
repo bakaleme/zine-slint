@@ -1,0 +1,12 @@
+# Rust build artifacts
+target/
+
+# Cargo lock file
+Cargo.lock
+
+# Temporary files
+*.tmp
+*.swp
+
+# Environment files
+.env
