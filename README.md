@@ -1,4 +1,4 @@
-# Slint Rust Template
+# Slint Rust Template - just testing
 
 A template for a Rust application that's using [Slint](https://slint.rs/) for the user interface.
 
